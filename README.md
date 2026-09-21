@@ -229,5 +229,4 @@ Made by **Cookeroni**.
 ---
 
 ## License
-
-Released under the [MIT License](LICENSE). <!-- Add a LICENSE file if you haven't yet — MIT is a good default for a portfolio project. -->
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/Cookeroni/Riceberry/blob/main/LICENSE) file for details.
