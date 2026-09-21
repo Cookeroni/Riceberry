@@ -67,13 +67,12 @@ text = "${p.background.hex}"
 
 function toZenplify(p: Palette): string {
   // Structural + text colors are themed from the palette.
-  // Semantic status colors (success/charging/warning/danger) and the ARGB
-  // alpha overlays are kept as-is so the bar stays readable and correct.
+  // `primary` has no Zenplify slot; it stays in the CSS/JSON exports.
   return `pragma Singleton
-  import Quickshell
-  import QtQuick
+import Quickshell
+import QtQuick
 
-  Singleton {
+Singleton {
     readonly property string fontFamily: "Terminess Nerd Font Propo"
 
     readonly property color pillBg:        "${p.background.hex}"
@@ -82,8 +81,8 @@ function toZenplify(p: Palette): string {
     readonly property color textMuted:     "${p.muted.hex}"
     readonly property color textSecondary: "${p.secondary.hex}"
     readonly property color textAccent:    "${p.accent.hex}"
-  }
-  `;
+}
+`;
 }
 
 // ---------- registry: add a format = add a line here ----------
