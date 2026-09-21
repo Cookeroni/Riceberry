@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* App chrome — quiet, cool, Catppuccin-adjacent so it reads native to ricers */
+  --color-ink: #131320;      /* page background */
+  --color-surface: #1a1a2b;  /* panels, dropzone */
+  --color-raised: #22223a;   /* raised elements, picker popover */
+  --color-line: #2c2c44;     /* hairline borders */
+  --color-fg: #cdd6f4;       /* primary text */
+  --color-dim: #7a819e;      /* labels, secondary text */
+  --color-accent: #b4befe;   /* focus / active only — used sparingly */
+  --color-berry: #cba6f7;   /* wordmark accent — swap to #f5c2e7 for a pinker berry */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "JetBrains Mono", monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-fg);
+}
+
+/* Make the react-colorful picker fill the narrow panel neatly */
+.react-colorful {
+  width: 100%;
+  height: 160px;
 }
