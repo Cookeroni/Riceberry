@@ -63,7 +63,7 @@ It was also built as a companion to **Zenplify**, a [Quickshell](https://quicksh
 - **Per-swatch editing** — click any swatch to open a color picker, or click its hex to copy.
 - **Lock swatches** so a re-extract or reset never overwrites a color you've dialed in.
 - **Reset** — re-extract from the current image, or restore the default palette when none is loaded (locks respected either way).
-- **Live desktop preview** — a fake ricing desktop (Zenplify-style bar + neofetch terminal) that re-themes **as you edit**, powered entirely by CSS variables.
+- **Live desktop preview** — a fake ricing desktop (bar + neofetch terminal) that re-themes **as you edit**, powered entirely by CSS variables.
 - **Six export formats**, each with copy-to-clipboard and download-as-file.
 - **Runs entirely in your browser** — no upload leaves your machine, no account, no backend.
 
