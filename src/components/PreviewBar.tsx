@@ -4,20 +4,19 @@ const ACTIVE = 2;
 export function PreviewBar() {
   return (
     <div
-      className="flex items-center justify-between px-3 py-1.5 text-[10px] font-medium backdrop-blur-sm sm:text-xs"
+      className="flex items-center justify-between px-[1.1em] py-[0.5em] text-[1em] font-medium backdrop-blur-sm"
       style={{
         backgroundColor: "color-mix(in srgb, var(--rb-background) 78%, transparent)",
         color: "var(--rb-foreground)",
       }}
     >
-      {/* workspaces */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-[0.4em]">
         {WORKSPACES.map((n) => {
           const active = n === ACTIVE;
           return (
             <span
               key={n}
-              className="flex h-4 w-4 items-center justify-center rounded-full"
+              className="flex h-[1.6em] w-[1.6em] items-center justify-center rounded-full text-[0.85em]"
               style={
                 active
                   ? { backgroundColor: "var(--rb-accent)", color: "var(--rb-background)" }
@@ -30,13 +29,11 @@ export function PreviewBar() {
         })}
       </div>
 
-      {/* clock */}
       <div className="font-semibold" style={{ color: "var(--rb-primary)" }}>
         14:32 · Mon 21
       </div>
 
-      {/* indicators */}
-      <div className="flex items-center gap-2 font-mono">
+      <div className="flex items-center gap-[0.7em] font-mono">
         <span style={{ color: "var(--rb-secondary)" }}>cpu 12%</span>
         <span style={{ color: "var(--rb-accent)" }}>ram 38%</span>
         <span style={{ color: "var(--rb-foreground)" }}>bat 89%</span>

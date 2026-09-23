@@ -47,8 +47,8 @@ export function ExportPanel({ palette }: { palette: Palette }) {
         ))}
       </div>
 
-      <div className="flex items-center justify-between px-4 py-2">
-        <span className="font-mono text-xs text-dim">{active.filename}</span>
+        <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-2">
+          <span className="min-w-0 truncate font-mono text-xs text-dim">{active.filename}</span>
         <div className="flex gap-2">
           <button
             type="button"

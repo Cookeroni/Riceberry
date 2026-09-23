@@ -4,10 +4,7 @@ import { type Palette, ROLE_ORDER } from "@/types/palette";
 import { PreviewBar } from "./PreviewBar";
 import { PreviewTerminal } from "./PreviewTerminal";
 
-type Props = {
-  palette: Palette;
-  wallpaperSrc: string | null;
-};
+type Props = { palette: Palette; wallpaperSrc: string | null };
 
 export function PreviewDesktop({ palette, wallpaperSrc }: Props) {
   const vars: CSSProperties = {};
@@ -18,9 +15,8 @@ export function PreviewDesktop({ palette, wallpaperSrc }: Props) {
   return (
     <div
       style={vars}
-      className="relative aspect-video min-h-[390px] w-full overflow-hidden rounded-xl border border-line shadow-xl shadow-black/40"
+      className="@container relative aspect-video min-h-[200px] w-full overflow-hidden rounded-xl border border-line shadow-xl shadow-black/40 sm:min-h-[340px]"
     >
-      {/* wallpaper — or a themed solid background before any upload */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -28,12 +24,12 @@ export function PreviewDesktop({ palette, wallpaperSrc }: Props) {
           backgroundImage: wallpaperSrc ? `url("${wallpaperSrc}")` : undefined,
         }}
       />
-
-      {/* content layer: bar in flow at top, terminal centered in the space below */}
-      <div className="relative flex h-full flex-col">
+      {/* This one value drives the whole mock's scale: base font-size in cqi,
+          floored/capped so it stays sane at extremes. Every child sizes in em. */}
+      <div className="relative flex h-full flex-col text-[clamp(6.5px,1.7cqi,11px)]">
         <PreviewBar />
-        <div className="flex flex-1 items-center justify-center overflow-hidden p-4">
-          <div className="w-[72%] max-w-md">
+        <div className="flex flex-1 items-center justify-center overflow-hidden p-[1.4em]">
+          <div className="w-[82%]">
             <PreviewTerminal />
           </div>
         </div>

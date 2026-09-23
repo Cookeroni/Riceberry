@@ -30,30 +30,28 @@ const LOGO = `
 `;
 
 export function PreviewTerminal() {
-  return (
+    return (
     <div
-      className="overflow-hidden rounded-lg border shadow-xl backdrop-blur-md"
+      className="overflow-hidden rounded-[0.6em] border shadow-xl backdrop-blur-md text-[0.9em]"
       style={{
         backgroundColor: "color-mix(in srgb, var(--rb-background) 88%, transparent)",
         borderColor: "color-mix(in srgb, var(--rb-foreground) 20%, transparent)",
       }}
     >
-      {/* title bar */}
       <div
-        className="flex items-center gap-1.5 px-2 py-1"
+        className="flex items-center gap-[0.5em] px-[0.7em] py-[0.4em]"
         style={{ backgroundColor: "color-mix(in srgb, var(--rb-background) 95%, transparent)" }}
       >
-        <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "var(--rb-primary)" }} />
-        <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "var(--rb-accent)" }} />
-        <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "var(--rb-secondary)" }} />
-        <span className="ml-2 text-[9px]" style={{ color: "var(--rb-muted)" }}>
+        <span className="h-[0.7em] w-[0.7em] rounded-full" style={{ backgroundColor: "var(--rb-primary)" }} />
+        <span className="h-[0.7em] w-[0.7em] rounded-full" style={{ backgroundColor: "var(--rb-accent)" }} />
+        <span className="h-[0.7em] w-[0.7em] rounded-full" style={{ backgroundColor: "var(--rb-secondary)" }} />
+        <span className="ml-[0.5em] text-[0.85em]" style={{ color: "var(--rb-muted)" }}>
           rice@berry: ~
         </span>
       </div>
 
-      {/* body */}
-      <div className="flex gap-3 p-3 font-mono text-[9px] leading-snug sm:text-[10px]">
-        <pre className="whitespace-pre" style={{ color: "var(--rb-accent)" }}>
+      <div className="flex gap-[1.1em] p-[1.1em] font-mono leading-snug">
+        <pre className="whitespace-pre text-[0.8em] leading-none" style={{ color: "var(--rb-accent)" }}>
           {LOGO}
         </pre>
 
@@ -73,12 +71,11 @@ export function PreviewTerminal() {
             </div>
           ))}
 
-          {/* color test row — one block per role, the clearest live-retheme demo */}
-          <div className="mt-1.5 flex gap-1">
+          <div className="mt-[0.5em] flex gap-[0.4em]">
             {ROLE_ORDER.map((role) => (
               <span
                 key={role}
-                className="h-2.5 w-3.5 rounded-sm"
+                className="h-[0.95em] w-[1.3em] rounded-[0.2em]"
                 style={{ backgroundColor: `var(--rb-${role})` }}
               />
             ))}

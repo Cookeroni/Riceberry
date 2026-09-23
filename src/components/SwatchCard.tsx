@@ -59,14 +59,14 @@ export function SwatchCard({ role, swatch, onChange, onToggleLock }: Props) {
       {open && (
         <>
           <div className="fixed inset-0 z-10" onClick={() => setOpen(false)} />
-          <div className="absolute left-0 top-full z-20 mt-1 w-44 rounded-lg border border-line bg-raised p-2 shadow-xl shadow-black/40">
-            <HexColorPicker color={swatch.hex} onChange={onChange} />
-            <HexColorInput
-              color={swatch.hex}
-              onChange={onChange}
-              prefixed
-              className="mt-2 w-full rounded border border-line bg-ink px-2 py-1 font-mono text-sm text-fg"
-            />
+            <div className="absolute left-1/2 top-full z-20 mt-1 w-44 -translate-x-1/2 rounded-lg border border-line bg-raised p-2 shadow-xl shadow-black/40">
+              <HexColorPicker color={swatch.hex} onChange={onChange} />
+              <HexColorInput
+                color={swatch.hex}
+                onChange={onChange}
+                prefixed
+                className="mt-2 w-full rounded border border-line bg-ink px-2 py-1 font-mono text-sm text-fg"
+              />
           </div>
         </>
       )}

@@ -49,11 +49,11 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-full flex-col">
+    <div className="flex min-h-full flex-col overflow-x-hidden">
       <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-10">
         {/* Header: title, description, upload — centered */}
         <header className="mx-auto max-w-xl text-center">
-          <h1 className="font-mono text-4xl font-semibold tracking-tight">
+          <h1 className="font-mono text-3xl font-semibold tracking-tight sm:text-4xl">
             Rice<span className="text-berry">Berry</span>
           </h1>
           <p className="mt-2 text-sm text-dim">
