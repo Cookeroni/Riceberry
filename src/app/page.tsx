@@ -66,11 +66,11 @@ export default function Home() {
 
         {/* Work area: preview (left, wide) + palette panel (right) */}
         <div className="mt-10 grid gap-6 lg:grid-cols-5">
-          <section className="lg:col-span-3">
+          <section className="min-w-0 lg:col-span-3">
             <PreviewDesktop palette={palette} wallpaperSrc={imageSrc} />
           </section>
 
-          <aside className="flex flex-col gap-5 rounded-xl border border-line bg-surface p-5 pt-3 lg:col-span-2">
+          <aside className="flex min-w-0 flex-col gap-5 rounded-xl border border-line bg-surface p-5 pt-3 lg:col-span-2">
             <PaletteEditor
               palette={palette}
               onUpdateSwatch={updateSwatch}

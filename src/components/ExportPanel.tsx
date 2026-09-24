@@ -67,7 +67,7 @@ export function ExportPanel({ palette }: { palette: Palette }) {
         </div>
       </div>
 
-      <pre className="max-h-80 overflow-auto border-t border-line bg-ink px-4 py-3 font-mono text-xs leading-relaxed text-fg">
+      <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-all border-t border-line bg-ink px-4 py-3 font-mono text-xs leading-relaxed text-fg">
         {output}
       </pre>
     </div>
