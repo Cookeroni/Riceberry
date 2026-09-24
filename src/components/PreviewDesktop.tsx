@@ -15,7 +15,7 @@ export function PreviewDesktop({ palette, wallpaperSrc }: Props) {
   return (
     <div
       style={vars}
-      className="@container relative aspect-video min-h-[200px] w-full overflow-hidden rounded-xl border border-line shadow-xl shadow-black/40 sm:min-h-[340px]"
+      className="@container [-webkit-text-size-adjust:none] [text-size-adjust:none] relative aspect-video min-h-[200px] w-full overflow-hidden rounded-xl border border-line shadow-xl shadow-black/40 sm:min-h-[340px]"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
