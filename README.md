@@ -200,6 +200,7 @@ src/
 - **No persistence yet.** Palettes aren't saved between sessions.
 - **No built-in sample wallpapers yet.** The app loads with a sensible default palette, but you bring your own image to extract from.
 - **Modern browser required.** The live preview uses `color-mix()` and `backdrop-filter`.
+- **Opera GX on Android renders the preview text oversized.** This is caused by that browser's built-in text auto-sizing overriding the preview's own scaling. It only happens on Opera GX's Android engine. Chrome (Android) and Safari (iOS) render as intended, and Opera GX on iOS is fine too.
 
 ---
 
